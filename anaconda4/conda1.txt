@@ -1,0 +1,24 @@
+git --version
+
+git config --global user.name "AvishkarWaghmare2006"
+git config --global user.email "avishkarwaghmare23@gmail.com"
+git config --list
+
+mkdir DataScienceProject
+cd DataScienceProject
+
+git init
+
+git status
+
+git add .
+
+git commit -m "Initial commit"
+
+git remote add origin YOUR_GITHUB_REPOSITORY_URL
+
+git remote -v
+
+git branch -M main
+
+git push -u origin main
