@@ -22,3 +22,12 @@ git remote -v
 git branch -M main
 
 git push -u origin main
+
+ignore all the previous chats. You are an git/docker/jenkin/kubernets expert , your task is to perform this practical.
+Problem statement: "   "
+i am performing this practical on ubantu , give me step by step process to perform this practical
+in single cell , {the cell should contain each and ever step not just command, for eg: it should 
+ tell me which app to install or to navigate me if the jenkin/Kubernetes/docker if mentioned in problem statement
+ (like click three dots on right corner select this this[according to the requirements ])} .
+ everything only in single cell , no need to switch the cell in any conditions. dont explain me 
+ anything just give me the cell easy to copy.
