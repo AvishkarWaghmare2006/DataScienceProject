@@ -1,0 +1,64 @@
+
+# STEP 1: Switch to main branch
+git switch main
+
+# STEP 2: Create team_work.txt
+Set-Content team_work.txt "Project status: Initial"
+
+# STEP 3: Stage and commit initial file
+git add team_work.txt
+git commit -m "Add initial project status"
+
+# STEP 4: Create first feature branch
+git switch -c feature-preprocessing
+
+# STEP 5: Update file in first branch
+Set-Content team_work.txt "Project status: Preprocessing completed"
+
+# STEP 6: Stage and commit changes
+git add team_work.txt
+git commit -m "Complete data preprocessing"
+
+# STEP 7: Switch back to main
+git switch main
+
+# STEP 8: Create second feature branch
+git switch -c feature-visualization
+
+# STEP 9: Update file in second branch
+Set-Content team_work.txt "Project status: Visualization completed"
+
+# STEP 10: Stage and commit changes
+git add team_work.txt
+git commit -m "Complete data visualization"
+
+# STEP 11: Switch to main branch
+git switch main
+
+# STEP 12: Merge first feature branch
+git merge feature-preprocessing
+
+# STEP 13: Merge second feature branch
+# A merge conflict is expected here
+git merge feature-visualization
+
+# STEP 14: Resolve the conflict manually
+# Open team_work.txt in VS Code.
+# Replace the entire content with:
+# Project status: Preprocessing and visualization completed
+# Save the file.
+
+# STEP 15: Stage the resolved file
+git add team_work.txt
+
+# STEP 16: Commit the conflict resolution
+git commit -m "Resolve merge conflict"
+
+# STEP 17: Verify the final content
+Get-Content team_work.txt
+
+# STEP 18: Check repository status
+git status
+
+# STEP 19: View branch history
+git log --oneline --graph --all
