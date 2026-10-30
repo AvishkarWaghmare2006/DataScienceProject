@@ -1,0 +1,85 @@
+
+# PRACTICAL 3: Fork an Open-Source AI Project and Submit a Pull Request
+
+# 1. Navigate to your working directory
+cd $HOME
+
+# 2. Clone your forked repository
+git clone https://github.com/YOUR-USERNAME/scikit-learn.git
+
+# 3. Enter the project directory
+cd scikit-learn
+
+# 4. Check repository status and remote
+git status
+git remote -v
+
+# 5. Add the original repository as upstream
+git remote add upstream https://github.com/scikit-learn/scikit-learn.git
+
+# 6. Verify both remotes
+git remote -v
+
+# 7. Fetch original repository updates
+git fetch upstream
+
+# 8. Create a feature branch from upstream main
+git switch -c improve-ai-project-readme upstream/main
+
+# 9. Create README.md if it does not exist
+New-Item README.md -ItemType File
+
+# 10. Open the project in VS Code
+code .
+
+# MANUAL STEP:
+# Open README.md and add the following content:
+# # Scikit-learn
+# Scikit-learn is a Python library for machine learning.
+# ## Learning Resources
+# This project provides tools for machine learning in Python.
+# Beginners can explore the documentation and example tutorials
+# to understand model training, evaluation, and preprocessing.
+# Save the file.
+
+# 11. Check changes
+git status
+git diff
+
+# 12. Stage and commit changes
+git add README.md
+git commit -m "Add AI project learning resources"
+
+# 13. Push feature branch to your fork
+git push -u origin improve-ai-project-readme
+
+# 14. Create Pull Request on GitHub website:
+# Base repository: scikit-learn/scikit-learn
+# Base branch: main
+# Head repository: YOUR-USERNAME/scikit-learn
+# Compare branch: improve-ai-project-readme
+
+# 15. Fetch latest upstream changes
+git fetch upstream
+
+# 16. Switch to your feature branch
+git switch improve-ai-project-readme
+
+# 17. Merge upstream main into your feature branch
+git merge upstream/main
+
+# 18. If a conflict occurs:
+# Open the conflicted file in VS Code.
+# Resolve the conflict, remove conflict markers, and save.
+
+# 19. Stage and commit conflict resolution
+git add README.md
+git commit -m "Resolve conflict with upstream main"
+
+# 20. Push updated feature branch
+git push origin improve-ai-project-readme
+
+# 21. Verify final status and commit history
+git status
+git branch
+git log --oneline --graph --all
