@@ -1,1 +1,5 @@
-Project Status: Preprocessing and Visualization Completed
+<<<<<<<<< Temporary merge branch 1
+Project Status: Preprocessing completed
+=========
+Project Status: Visualiztion Completed
+>>>>>>>>> Temporary merge branch 2
